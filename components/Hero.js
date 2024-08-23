@@ -23,7 +23,6 @@ const Hero = () => {
             A traveller <br />
             <span className="text-orange font-normal">Petsitter</span> <br />
           </h1>
-          <button className="btn btn-orange mx-auto lg:mx-0">Learn more</button>
         </div>
       </div>
     </section>

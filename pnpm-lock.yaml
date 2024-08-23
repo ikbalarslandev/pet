@@ -25,7 +25,7 @@ importers:
         specifier: ^8.4.19
         version: 8.4.41
       react-icons:
-        specifier: ^4.7.1
+        specifier: ^4.12.0
         version: 4.12.0(react@18.2.0)
       swiper:
         specifier: ^8.4.5
