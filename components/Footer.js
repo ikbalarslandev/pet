@@ -11,22 +11,22 @@ const Footer = () => {
         <div className="coflex flex-col lg:flex-row">
           {/* logo */}
           <div className="flex-1 text-orange text-4xl text-center lg:text-left flex items-center justify-center lg:justify-start mb-6">
-            Pet First
+            Tiara Petsits
           </div>
           <div className="text-white flex-1">
             {/* links */}
             <ul className="flex flex-col gap-y-6 items-center lg:flex-row lg:gap-x-4 text-base font-semibold mb-8">
               <li>
-                <a href="#">Service</a>
+                <a href="#">Services</a>
               </li>
               <li>
                 <a href="#">About</a>
               </li>
               <li>
-                <a href="#">Blog</a>
+                <a href="#">Gallery</a>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="#">Reviews</a>
               </li>
             </ul>
             {/* socials */}
