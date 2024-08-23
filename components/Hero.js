@@ -20,9 +20,8 @@ const Hero = () => {
             <Image src={pretitleImg} width={"100%"} height={"auto"} alt="" />
           </div>
           <h1 className="text-5l lg:text-8xl uppercase font-bold -tracking-[0.05em] mb-10">
-            A pet first <br />
-            <span className="text-orange font-normal">approach to</span> <br />
-            wellness
+            A traveller <br />
+            <span className="text-orange font-normal">Petsitter</span> <br />
           </h1>
           <button className="btn btn-orange mx-auto lg:mx-0">Learn more</button>
         </div>
