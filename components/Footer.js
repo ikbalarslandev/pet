@@ -1,6 +1,8 @@
 import React from "react";
 
 import { BsFacebook, BsInstagram, BsTwitter, BsWhatsapp } from "react-icons/bs";
+import { FaWhatsapp } from "react-icons/fa";
+import { CgMail } from "react-icons/cg";
 
 const Footer = () => {
   return (
@@ -29,21 +31,23 @@ const Footer = () => {
             </ul>
             {/* socials */}
             <div className="flex justify-center lg:justify-start">
-              <div className="mr-6">Follow</div>
-              <ul className="flex gap-x-4">
+              <ul className="flex gap-x-4 items-center">
                 <li>
-                  <a href="#">
-                    <BsFacebook />
+                  <a href="https://www.instagram.com/nerdwhogotghosted/">
+                    <BsInstagram size={24} />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <BsInstagram />
+                  <a
+                    href="https://wa.me/905414680913?text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20services"
+                    target="_blank"
+                  >
+                    <FaWhatsapp size={26} />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <BsTwitter />
+                  <a href="mailto:mutesmshop@gmail.com">
+                    <CgMail size={32} />
                   </a>
                 </li>
               </ul>
