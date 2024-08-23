@@ -1,41 +1,42 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     fontFamily: {
-      primary: 'Josefin Sans',
+      primary: "Josefin Sans",
     },
     container: {
       padding: {
-        DEFAULT: '1rem',
-        lg: '0',
+        DEFAULT: "1rem",
+        lg: "0",
       },
     },
     screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1110px',
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1110px",
     },
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#062d3e',
-          hover: '#021f2C',
+          DEFAULT: "#062d3e",
+          hover: "#021f2C",
         },
-        cream: '#ebe3cc',
-        teal: '#189cab',
+        cream: "#ebe3cc",
+        teal: "#189cab",
         orange: {
-          DEFAULT: '#ed5c01',
-          hover: '#e45a03',
+          DEFAULT: "#ed5c01",
+          hover: "#e45a03",
         },
-        yellow: '#fbbd08',
+        yellow: "#fbbd08",
       },
       backgroundImage: {
         hero: "url('/img/hero/hero-bg.png')",
+        "mobile-hero": "url('/img/hero/mobile-bg.jpeg')",
         pets: "url('/img/pets/pets-bg.png')",
         services: "url('/img/services/bg.png')",
         adoption: "url('/img/adoption/bg.png')",
