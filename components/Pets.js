@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import Pet1Img from "../public/img/pets/1.Jpeg";
-import Pet2Img from "../public/img/pets/2.png";
+import Pet1Img from "../public/img/pets/1.jpg";
+// import Pet2Img from "../public/img/pets/2.png";
 // import Pet3Img from "../public/img/pets/3.png";
 // import Pet4Img from "../public/img/pets/4.png";
 // import Pet5Img from "../public/img/pets/5.png";
@@ -15,11 +15,11 @@ const pets = [
     category: "Jamie",
     image: Pet1Img,
   },
-  {
-    id: 2,
-    category: "Daphne",
-    image: Pet2Img,
-  },
+  // {
+  //   id: 2,
+  //   category: "Daphne",
+  //   image: Pet2Img,
+  // },
   // {
   //   id: 3,
   //   category: "Dolma",
