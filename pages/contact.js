@@ -37,7 +37,7 @@ const Contact = () => {
           <p>mutesmshop@gmail.com</p>
         </Link>
         <Image
-          className="absolute right-0 bottom-0 "
+          className="absolute right-0 -bottom-3 "
           src={Cont}
           alt="Nerd Who Got Ghosted"
           width={200}
