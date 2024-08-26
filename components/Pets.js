@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import Pet1Img from "../public/img/pets/1.PNG";
-import Pet2Img from "../public/img/pets/2.PNG";
-import Pet3Img from "../public/img/pets/3.PNG";
-import Pet4Img from "../public/img/pets/4.PNG";
-import Pet5Img from "../public/img/pets/5.PNG";
-import Pet6Img from "../public/img/pets/6.PNG";
-import Pet7Img from "../public/img/pets/7.PNG";
-import Pet8Img from "../public/img/pets/8.PNG";
+import Pet1Img from "../public/img/pets/1.Jpeg";
+// import Pet2Img from "../public/img/pets/2.JPG";
+// import Pet3Img from "../public/img/pets/3.JPG";
+// import Pet4Img from "../public/img/pets/4.JPG";
+// import Pet5Img from "../public/img/pets/5.JPG";
+// import Pet6Img from "../public/img/pets/6.JPG";
+// import Pet7Img from "../public/img/pets/7.JPG";
+// import Pet8Img from "../public/img/pets/8.JPG";
 
 const pets = [
   {
@@ -15,41 +15,41 @@ const pets = [
     category: "Jamie",
     image: Pet1Img,
   },
-  {
-    id: 2,
-    category: "Daphne",
-    image: Pet2Img,
-  },
-  {
-    id: 3,
-    category: "Dolma",
-    image: Pet3Img,
-  },
-  {
-    id: 4,
-    category: "Fifi",
-    image: Pet4Img,
-  },
-  {
-    id: 5,
-    category: "Tobey",
-    image: Pet5Img,
-  },
-  {
-    id: 6,
-    category: "Milky",
-    image: Pet6Img,
-  },
-  {
-    id: 7,
-    category: "Soda",
-    image: Pet7Img,
-  },
-  {
-    id: 8,
-    category: "Bean",
-    image: Pet8Img,
-  },
+  // {
+  //   id: 2,
+  //   category: "Daphne",
+  //   image: Pet2Img,
+  // },
+  // {
+  //   id: 3,
+  //   category: "Dolma",
+  //   image: Pet3Img,
+  // },
+  // {
+  //   id: 4,
+  //   category: "Fifi",
+  //   image: Pet4Img,
+  // },
+  // {
+  //   id: 5,
+  //   category: "Tobey",
+  //   image: Pet5Img,
+  // },
+  // {
+  //   id: 6,
+  //   category: "Milky",
+  //   image: Pet6Img,
+  // },
+  // {
+  //   id: 7,
+  //   category: "Soda",
+  //   image: Pet7Img,
+  // },
+  // {
+  //   id: 8,
+  //   category: "Bean",
+  //   image: Pet8Img,
+  // },
 ];
 
 const Pets = () => {
