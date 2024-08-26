@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Pet1Img from "../public/img/pets/1.png";
-import Pet2Img from "../public/img/pets/2.png";
+import Pet2Img from "../public/img/pets/2.PNG";
 // import Pet3Img from "../public/img/pets/3.png";
 // import Pet4Img from "../public/img/pets/4.png";
 // import Pet5Img from "../public/img/pets/5.png";
