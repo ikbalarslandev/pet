@@ -8,21 +8,30 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   const servicesRef = useRef(null);
+  const aboutRef = useRef(null);
 
   const scrollToServices = () => {
     if (servicesRef.current) {
       servicesRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const scrollToAbout = () => {
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="max-w-[1440px] mx-auto overflow-hidden">
-      <Hero scrollToServices={scrollToServices} />
+      <Hero scrollToServices={scrollToServices} scrollToAbout={scrollToAbout} />
       <Pets />
-      <About />
+      <About ref={aboutRef} />
       <Services ref={servicesRef} />
       <Newsletter />
-      <Footer />
+      <Footer
+        scrollToServices={scrollToServices}
+        scrollToAbout={scrollToAbout}
+      />
     </div>
   );
 };
