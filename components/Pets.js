@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import Pet1Img from "../public/img/pets/1.Jpeg";
+import Pet1Img from "../public/img/pets/1.png";
 // import Pet2Img from "../public/img/pets/2.JPG";
 // import Pet3Img from "../public/img/pets/3.JPG";
 // import Pet4Img from "../public/img/pets/4.JPG";
