@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import Pet1Img from "../public/img/pets/1.jpeg";
-import Pet2Img from "../public/img/pets/2.jpeg";
-import Pet3Img from "../public/img/pets/3.jpeg";
-import Pet4Img from "../public/img/pets/4.jpeg";
-import Pet5Img from "../public/img/pets/5.jpeg";
-import Pet6Img from "../public/img/pets/6.jpeg";
-import Pet7Img from "../public/img/pets/7.jpeg";
-import Pet8Img from "../public/img/pets/8.jpeg";
+import Pet1Img from "../public/img/pets/1.PNG";
+import Pet2Img from "../public/img/pets/2.PNG";
+import Pet3Img from "../public/img/pets/3.PNG";
+import Pet4Img from "../public/img/pets/4.PNG";
+import Pet5Img from "../public/img/pets/5.PNG";
+import Pet6Img from "../public/img/pets/6.PNG";
+import Pet7Img from "../public/img/pets/7.PNG";
+import Pet8Img from "../public/img/pets/8.PNG";
 
 const pets = [
   {
