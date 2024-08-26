@@ -21,20 +21,20 @@ const Footer = ({ scrollToServices, scrollToAbout }) => {
                 <p
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToServices();
+                    scrollToAbout();
                   }}
                 >
-                  Services
+                  About
                 </p>
               </li>
               <li>
                 <p
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToAbout();
+                    scrollToServices();
                   }}
                 >
-                  About
+                  Services
                 </p>
               </li>
               <li>
