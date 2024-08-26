@@ -73,11 +73,14 @@ const ServiceSlider = () => {
               className="border border-primary/20 bg-cream  rounded-[66px] py-12 px-8"
               key={index}
             >
-              <div className="flex items-center"> {service.icon}</div>
-
-              <div className="text-[26px] font-medium mb-4">{service.name}</div>
-              <div className="text-[20px]  max-h-80 overflow-hidden overflow-y-auto">
-                {service.description}
+              <div key={index}>
+                <div className="flex items-center"> {service.icon}</div>
+                <div className="text-[26px] font-medium mb-4">
+                  {service.name}
+                </div>
+                <div className="text-[20px]  max-h-80 overflow-hidden overflow-y-auto">
+                  {service.description}
+                </div>
               </div>
             </SwiperSlide>
           </>
