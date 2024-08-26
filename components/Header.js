@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = ({ scrollToServices, scrollToAbout }) => {
   return (
-    <header className="py-6 lg:absolute lg:w-full lg:left-0">
+    <header className="py-6 lg:absolute lg:w-full lg:left-0 cursor-pointer">
       <div className="container mx-auto flex flex-col gap-y-6 lg:flex-row h-full justify-between items-center relative text-slate-300 md:text-primary">
         {/* logo */}
         <a href="#">Tiara Petsits</a>

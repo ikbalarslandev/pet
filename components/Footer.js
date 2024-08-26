@@ -1,8 +1,9 @@
 import React from "react";
 
-import { BsFacebook, BsInstagram, BsTwitter, BsWhatsapp } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
 import { FaWhatsapp } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
+import Link from "next/link";
 
 const Footer = ({ scrollToServices, scrollToAbout }) => {
   return (
@@ -15,55 +16,57 @@ const Footer = ({ scrollToServices, scrollToAbout }) => {
           </div>
           <div className="text-white flex-1">
             {/* links */}
-            <ul className="flex flex-col gap-y-6 items-center lg:flex-row lg:gap-x-4 text-base font-semibold mb-8">
-              <a
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToServices();
-                }}
-              >
-                Services
-              </a>
+            <ul className="flex flex-col gap-y-6 items-center lg:flex-row lg:gap-x-4 text-base font-semibold mb-8 cursor-pointer">
               <li>
-                <a
+                <p
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToServices();
+                  }}
+                >
+                  Services
+                </p>
+              </li>
+              <li>
+                <p
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToAbout();
                   }}
                 >
                   About
-                </a>
+                </p>
               </li>
               <li>
-                <a href="/gallery">Gallery</a>
+                <Link href="/gallery">Gallery</Link>
               </li>
               <li>
-                <a href="/review">Reviews</a>
+                <Link href="/review">Reviews</Link>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
             {/* socials */}
             <div className="flex justify-center lg:justify-start">
               <ul className="flex gap-x-4 items-center">
                 <li>
-                  <a href="https://www.instagram.com/nerdwhogotghosted/">
+                  <Link href="https://www.instagram.com/nerdwhogotghosted/">
                     <BsInstagram size={24} />
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="https://wa.me/905414680913?text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20services"
                     target="_blank"
                   >
                     <FaWhatsapp size={26} />
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="mailto:mutesmshop@gmail.com">
+                  <Link href="mailto:mutesmshop@gmail.com">
                     <CgMail size={32} />
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
