@@ -6,7 +6,7 @@ const fifiImages = [
   "/img/gallery/fifi/3fifi.png",
   "/img/gallery/fifi/4fifi.png",
   "/img/gallery/fifi/5fifi.png",
-  "/img/gallery/fifi/6fifi.png",
+  "/img/gallery/fifi/6fifi.jpg",
 ];
 
 const Gallery = () => {
