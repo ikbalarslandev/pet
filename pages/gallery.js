@@ -13,32 +13,42 @@ const fifiImages = [
 const Gallery = () => {
   const fifiRef = useRef(null);
   const dolmaRef = useRef(null);
+  const honeyRef = useRef(null);
 
-  const handleScroll = (e) => {
-    const scrollPosition = window.scrollY + window.innerHeight / 2; // Midpoint of the viewport
-    const fifiPosition = fifiRef.current.offsetTop;
-    const dolmaPosition = dolmaRef.current.offsetTop;
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-    // If scrolling down and near the bottom of the fifi section
-    if (
-      scrollPosition >= fifiPosition &&
-      scrollPosition < dolmaPosition &&
-      e.deltaY > 0
-    ) {
-      dolmaRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    // If scrolling up and near the top of the dolma section
-    else if (scrollPosition >= dolmaPosition && e.deltaY < 0) {
-      fifiRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+    const sections = [
+      { ref: fifiRef, position: fifiRef.current.offsetTop },
+      { ref: dolmaRef, position: dolmaRef.current.offsetTop },
+      { ref: honeyRef, position: honeyRef.current.offsetTop },
+    ];
+
+    // Find the closest section
+    const closestSection = sections.reduce((prev, curr) => {
+      return Math.abs(curr.position - scrollPosition) <
+        Math.abs(prev.position - scrollPosition)
+        ? curr
+        : prev;
+    });
+
+    // Scroll to the closest section
+    closestSection.ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
-    window.addEventListener("wheel", handleScroll);
+    let timeoutId;
+    const scrollListener = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(handleScroll, 100);
+    };
+
+    window.addEventListener("scroll", scrollListener);
 
     // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("scroll", scrollListener);
+      clearTimeout(timeoutId);
     };
   }, []);
 
@@ -55,6 +65,13 @@ const Gallery = () => {
       <div ref={dolmaRef} className="bg-orange-500 h-[100vh]">
         <div className="pt-16">
           <h1 className="font-bold text-3xl">Dolma</h1>
+          <GallerySwiper images={fifiImages} />
+        </div>
+      </div>
+      {/* honey */}
+      <div ref={honeyRef} className="bg-yellow h-[100vh]">
+        <div className="pt-16">
+          <h1 className="font-bold text-3xl">Honey</h1>
           <GallerySwiper images={fifiImages} />
         </div>
       </div>
