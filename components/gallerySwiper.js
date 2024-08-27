@@ -26,12 +26,15 @@ const GallerySwiper = ({ images }) => {
       {images.map((imageUrl, index) => {
         return (
           <>
-            <SwiperSlide key={index}>
+            <SwiperSlide
+              key={index}
+              className="flex items-center justify-center"
+            >
               <Image
                 src={imageUrl}
                 alt="gallery picture"
-                width={700}
-                height={700}
+                width={250}
+                height={500}
                 className="rounded-3xl"
               />
             </SwiperSlide>

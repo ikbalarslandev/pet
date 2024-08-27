@@ -1,4 +1,3 @@
-import { useRef, useEffect } from "react";
 import GallerySwiper from "../components/gallerySwiper";
 
 const fifiImages = [
@@ -11,67 +10,81 @@ const fifiImages = [
 ];
 
 const Gallery = () => {
-  const fifiRef = useRef(null);
-  const dolmaRef = useRef(null);
-  const honeyRef = useRef(null);
-
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-    const sections = [
-      { ref: fifiRef, position: fifiRef.current.offsetTop },
-      { ref: dolmaRef, position: dolmaRef.current.offsetTop },
-      { ref: honeyRef, position: honeyRef.current.offsetTop },
-    ];
-
-    // Find the closest section
-    const closestSection = sections.reduce((prev, curr) => {
-      return Math.abs(curr.position - scrollPosition) <
-        Math.abs(prev.position - scrollPosition)
-        ? curr
-        : prev;
-    });
-
-    // Scroll to the closest section
-    closestSection.ref.current.scrollIntoView({ behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    let timeoutId;
-    const scrollListener = () => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(handleScroll, 100);
-    };
-
-    window.addEventListener("scroll", scrollListener);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", scrollListener);
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
   return (
     <div className="text-center">
-      {/* fifi */}
-      <div ref={fifiRef} className="bg-cyan-500 h-[100vh]">
+      {/* jamie */}
+      <div className="bg-cyan-500 min-h-[100vh]">
+        <div className="pt-5">
+          <h1 className="font-bold text-3xl">Jamie</h1>
+          <GallerySwiper images={fifiImages} />
+        </div>
+        <div className="text-sm mx-2 text-left flex flex-col gap-2 my-4">
+          <p>
+            I had the delightful opportunity to care for Fifi, a senior cat,
+            during a two-week drop-in visit. Fifi’s affectionate and cuddly
+            nature made each visit a pleasure.
+          </p>
+          <p>
+            She particularly enjoyed being brushed and would eagerly seek out
+            attention and gentle grooming.
+          </p>
+          <p>
+            Additionally, she had a quirky habit of crunching on leaves, which
+            added a charming touch to our time together.
+          </p>
+          <p>
+            My experience with Fifi was truly enjoyable, as her loving
+            personality and unique preferences made each interaction special.
+          </p>
+        </div>
+      </div>
+      {/* daphnie */}
+      <div className="bg-orange-500 h-[100vh]">
         <div className="pt-16">
-          <h1 className="font-bold text-3xl">Fifi</h1>
+          <h1 className="font-bold text-3xl">Daphnie</h1>
           <GallerySwiper images={fifiImages} />
         </div>
       </div>
       {/* dolma */}
-      <div ref={dolmaRef} className="bg-orange-500 h-[100vh]">
+      <div className="bg-yellow h-[100vh]">
         <div className="pt-16">
           <h1 className="font-bold text-3xl">Dolma</h1>
           <GallerySwiper images={fifiImages} />
         </div>
       </div>
-      {/* honey */}
-      <div ref={honeyRef} className="bg-yellow h-[100vh]">
+      {/* fifi */}
+      <div className="bg-cyan-500 h-[100vh]">
         <div className="pt-16">
-          <h1 className="font-bold text-3xl">Honey</h1>
+          <h1 className="font-bold text-3xl">Fifi</h1>
+          <GallerySwiper images={fifiImages} />
+        </div>
+      </div>
+      {/* tobey */}
+      <div className="bg-orange-500 h-[100vh]">
+        <div className="pt-16">
+          <h1 className="font-bold text-3xl">Tobey</h1>
+          <GallerySwiper images={fifiImages} />
+        </div>
+      </div>
+
+      {/* milky */}
+      <div className="bg-yellow h-[100vh]">
+        <div className="pt-16">
+          <h1 className="font-bold text-3xl">Milky</h1>
+          <GallerySwiper images={fifiImages} />
+        </div>
+      </div>
+      {/* soda */}
+      <div className="bg-cyan-500 h-[100vh]">
+        <div className="pt-16">
+          <h1 className="font-bold text-3xl">Soda</h1>
+          <GallerySwiper images={fifiImages} />
+        </div>
+      </div>
+      {/* bean */}
+      <div className="bg-orange-500 h-[100vh]">
+        <div className="pt-16">
+          <h1 className="font-bold text-3xl">Bean</h1>
           <GallerySwiper images={fifiImages} />
         </div>
       </div>
